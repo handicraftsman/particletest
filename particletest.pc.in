@@ -1,0 +1,5 @@
+Name: particletest
+Description: A simple unit testing framework for C++ apps
+Version: @PROJECT_VERSION@
+Cflags: -I@CMAKE_INSTALL_PREFIX@/include/
+Libs: -L@CMAKE_INSTALL_PREFIX@/lib/ -lparticletest
