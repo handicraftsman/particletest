@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.1 FATAL_ERROR)
-project(ParticleTest VERSION 0.1.0 LANGUAGES CXX)
+project(ParticleTest VERSION 0.1.1 LANGUAGES CXX)
 
 if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
   set(CMAKE_INSTALL_PREFIX /usr/ CACHE PATH "Default install prefix" FORCE)

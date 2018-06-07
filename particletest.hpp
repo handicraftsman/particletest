@@ -27,7 +27,7 @@ class particletest {
 public:
   typedef std::function<bool()> test_func;
 
-  particletest();
+  particletest(std::string name = "unnamed test");
   virtual ~particletest();
 
   int ptest_execute();
@@ -38,6 +38,7 @@ protected:
   void ptest_register_test_(std::string name, test_func func);
   void ptest_push_to_log(std::string msg);
 
+  std::string name;
   int ptest_amt;
   int ptest_amt_all;
 

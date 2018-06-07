@@ -5,16 +5,15 @@
 
 #include <cxxabi.h>
 
-particletest::particletest()
-: ptest_amt(0)
+particletest::particletest(std::string _name)
+: name(_name)
+, ptest_amt(0)
 , ptest_amt_all(0)
 {}
 particletest::~particletest() {}
 
 int particletest::ptest_execute() {
-  int status;
-  char* i = abi::__cxa_demangle(typeid(*this).name(), 0, 0, &status);
-  std::clog << "Test " << i << std::endl;
+  std::clog << "Test " << name << std::endl;
   
   int all_ok = true;
   for (std::pair<std::string, particletest::test_func> p : ptest_funcs) {
